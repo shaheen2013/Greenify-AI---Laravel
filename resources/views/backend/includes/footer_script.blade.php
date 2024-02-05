@@ -19,35 +19,42 @@
 {{-- <script src="{{asset('assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js')}}"></script> --}}
 
 <!-- Main JS -->
-<script src="{{ asset('assets/js/main.js') }}"></script>
+{{-- <script src="{{ asset('assets/js/main.js') }}"></script> --}}
 
 <!-- Page JS -->
 {{-- <script src="{{asset('assets/js/dashboards-analytics.js')}}"></script> --}}
 
 {{-- <script src="{{ asset('/public/assets/') }}/js/toastr.min.js"></script> --}}
 
-<script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-<script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+{{-- <script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script> --}}
 
+<script src="{{asset('assets/vendor/libs/jquery/jquery.js')}}"></script>
 
 <script>
-    toastr.options = {
-        "closeButton": true,
-        "debug": false,
-        "newestOnTop": true,
-        "progressBar": true,
-        "positionClass": "toast-top-right",
-        "preventDuplicates": false,
-        "onclick": null,
-        "showDuration": "300",
-        "hideDuration": "1000",
-        "timeOut": "4000",
-        "extendedTimeOut": "1000",
-        "showEasing": "swing",
-        "hideEasing": "linear",
-        "showMethod": "fadeIn",
-        "hideMethod": "fadeOut"
+    document.onload = function ()
+    {
+
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": true,
+            "progressBar": true,
+            "positionClass": "toast-top-right",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "4000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
     }
+
+
+
 </script>
 
 {!! Toastr::message() !!}

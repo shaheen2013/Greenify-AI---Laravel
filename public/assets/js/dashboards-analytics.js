@@ -6,19 +6,12 @@
 
 (function () {
   let cardColor, headingColor, labelColor, shadeColor, grayColor;
-  if (isDarkStyle) {
-    cardColor = config.colors_dark.cardColor;
-    labelColor = config.colors_dark.textMuted;
-    headingColor = config.colors_dark.headingColor;
-    shadeColor = 'dark';
-    grayColor = '#5E6692'; // gray color is for stacked bar chart
-  } else {
+
     cardColor = config.colors.cardColor;
     labelColor = config.colors.textMuted;
     headingColor = config.colors.headingColor;
     shadeColor = '';
     grayColor = '#817D8D';
-  }
 
   // swiper loop and autoplay
   // --------------------------------------------------------------------

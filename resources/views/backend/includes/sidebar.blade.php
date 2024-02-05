@@ -35,13 +35,18 @@
             </a>
         </li>
 
-        <li class="menu-item ">
-            <a href="" class="menu-link">
+        <li class="menu-item {{Route::is('roles.*')?'active':''}}">
+            <a href="{{route('roles.index')}}" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-lock"></i>
                 <div data-i18n="Role">Role</div>
             </a>
         </li>
-
+        <li class="menu-item {{Route::is('permissions.*')?'active':''}}">
+            <a href="{{route('permissions.index')}}" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-lock"></i>
+                <div data-i18n="Permissions">Permissions</div>
+            </a>
+        </li>
 
         <li class="menu-item ">
             <a href="javascript:void(0);" class="menu-link menu-toggle">

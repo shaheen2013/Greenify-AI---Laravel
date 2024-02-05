@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\LoginController;
+use App\Http\Controllers\Backend\UserController;
+use App\Http\Controllers\Backend\UserRoleController;
+use App\Http\Controllers\Backend\UserPermissionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +35,8 @@ Route::prefix('backend')->group(function () {
         Route::get('/dashboard', function () {
             return view('backend.dashboard');
         })->name('backend.dashboard');
+        Route::resource('users', UserController::class);
+        Route::resource('roles', UserRoleController::class);
+        Route::resource('permissions', UserPermissionController::class);
     });
-
 });

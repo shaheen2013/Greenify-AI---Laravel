@@ -1,6 +1,6 @@
 import './bootstrap';
 
-import '../../public/assets/vendor/libs/jquery/jquery.js';
+
 import '../../public/assets/vendor/libs/popper/popper.js';
 import '../../public/assets/vendor/js/bootstrap.js';
 import '../../public/assets/vendor/libs/node-waves/node-waves.js';
@@ -21,7 +21,7 @@ import '../../public/assets/vendor/libs/apex-charts/apexcharts.js';
 import '../../public/assets/vendor/libs/swiper/swiper.js';
 import '../../public/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js';
 
-
+import '../../public/assets/js/main.js';
 import '../../public/assets/js/dashboards-analytics.js';
 import '../../public/assets/vendor/libs/cleavejs/cleave.js';
 import '../../public/assets/vendor/libs/cleavejs/cleave-phone.js';
@@ -35,8 +35,14 @@ import '../../public/assets/vendor/libs/sweetalert2/sweetalert2.js';
 import '../../public/assets/vendor/libs/bootstrap-select/bootstrap-select.js';
 import '../../public/assets/vendor/libs/bs-stepper/bs-stepper.js';
 import '../../public/assets/js/form-wizard-icons.js';
+import '../../public/assets/vendor/libs/quill/katex.js';
+import '../../public/assets/vendor/libs/quill/quill.js';
+import '../../public/assets/vendor/libs/toastr/toastr.js';
+import '../../public/assets/js/ui-toasts.js';
+// import '../../public/assets/js/app-ecommerce-category-list.js';
 
-import '../../public/assets/js/main.js';
+
+
 
 
 // import '../../public/assets/js/extended-ui-sweetalert2.js';

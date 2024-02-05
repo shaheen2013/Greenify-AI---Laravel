@@ -28,6 +28,11 @@
 @import url('../../public/assets/vendor/libs/sweetalert2/sweetalert2.css');
 @import url('../../public/assets/vendor/libs/bootstrap-select/bootstrap-select.css');
 @import url('../../public/assets/vendor/libs/bs-stepper/bs-stepper.css');
+@import url('../../public/assets/vendor/libs/quill/typography.css');
+@import url('../../public/assets/vendor/libs/quill/katex.css');
+@import url('../../public/assets/vendor/libs/quill/editor.css');
+@import url('../../public/assets/vendor/css/pages/app-ecommerce.css');
+@import url('../../public/assets/css/custom.css');
+@import url('../../public/assets/vendor/libs/toastr/toastr.css');
 /* @import url('../../public/assets/vendor/libs/bootstrap-select/bootstrap-select.css'); */
-
-
+/* <link rel="stylesheet" href="../../assets/vendor/libs/toastr/toastr.css" /> */

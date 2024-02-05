@@ -40,6 +40,7 @@ class LoginController extends Controller
      */
     public function postLogout(Request $request): RedirectResponse
     {
+
         Auth::guard('web')->logout();
 
         $request->session()->invalidate();
