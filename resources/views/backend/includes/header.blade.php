@@ -23,18 +23,19 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Icons -->
-    {{-- <link rel="stylesheet" href="{{asset('assets/vendor/fonts/fontawesome.css')}}" />
-    <link rel="stylesheet" href="{{asset('assets/vendor/fonts/tabler-icons.css')}}" />
+    <link rel="stylesheet" href="{{asset('assets/vendor/fonts/fontawesome.css')}}" />
+    {{-- <link rel="stylesheet" href="{{asset('assets/vendor/fonts/tabler-icons.css')}}" />
     <link rel="stylesheet" href="{{asset('assets/vendor/fonts/flag-icons.css')}}" /> --}}
 
     <!-- Core CSS -->
     <link rel="stylesheet" href="{{asset('assets/vendor/css/rtl/core.css')}}" class="template-customizer-core-css" />
     <link rel="stylesheet" href="{{asset('assets/vendor/css/rtl/theme-default.css')}}" class="template-customizer-theme-css" />
-    {{-- <link rel="stylesheet" href="{{asset('assets/css/demo.css')}}" /> --}}
-    {{-- <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css"> --}}
+    <link rel="stylesheet" href="{{asset('assets/css/demo.css')}}" />
+    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <!-- Vendors CSS -->
+    <link rel="stylesheet" href="{{asset('assets/vendor/libs/bs-stepper/bs-stepper.css')}}"/>
     {{-- <link rel="stylesheet" href="{{asset('assets/vendor/libs/node-waves/node-waves.css')}}" />
     <link rel="stylesheet" href="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css')}}" />
     <link rel="stylesheet" href="{{asset('assets/vendor/libs/typeahead-js/typeahead.css')}}" />

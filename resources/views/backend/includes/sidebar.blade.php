@@ -1,5 +1,5 @@
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
-    <div class="app-brand demo">
+    <div class="app-brand demo mt-3">
         <a href="index.html" class="app-brand-link">
             <span class="app-brand-logo demo">
                 <svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,61 +30,29 @@
         <!-- Dashboards -->
         <li class="menu-item {{Route::is('backend.dashboard')?'active':''}}">
             <a href="{{route('backend.dashboard')}}" class="menu-link">
-                <i class="menu-icon tf-icons ti ti-smart-home"></i>
+                <i class="menu-icon fa-solid fa-house"></i>
                 <div data-i18n="Dashboard">Dashboard</div>
             </a>
         </li>
 
         <li class="menu-item {{Route::is('roles.*')?'active':''}}">
             <a href="{{route('roles.index')}}" class="menu-link">
-                <i class="menu-icon tf-icons ti ti-lock"></i>
+                <i class="menu-icon fa-solid fa-user-tag"></i>
                 <div data-i18n="Role">Role</div>
             </a>
         </li>
         <li class="menu-item {{Route::is('permissions.*')?'active':''}}">
             <a href="{{route('permissions.index')}}" class="menu-link">
-                <i class="menu-icon tf-icons ti ti-lock"></i>
+                <i class="menu-icon fa-solid fa-tags"></i>
                 <div data-i18n="Permissions">Permissions</div>
             </a>
         </li>
 
-        <li class="menu-item ">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons ti ti-settings"></i>
+        <li class="menu-item {{Route::is('settings.*')?'active':''}}">
+            <a href="{{route('settings.index')}}" class="menu-link">
+                <i class="menu-icon fa-solid fa-gear"></i>
                 <div data-i18n="System Settings">System Settings</div>
             </a>
-            <ul class="menu-sub">
-                <li class="menu-item ">
-                    <a href="" class="menu-link">
-                        <div data-i18n="General Setting">General Setting</div>
-                    </a>
-                </li>
-                <li class="menu-item ">
-                    <a href="" class="menu-link">
-                        <div data-i18n="Email Setting">Email Setting</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="app-ecommerce-settings-checkout.html" class="menu-link">
-                        <div data-i18n="Checkout">Checkout</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="app-ecommerce-settings-shipping.html" class="menu-link">
-                        <div data-i18n="Shipping & Delivery">Shipping & Delivery</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="app-ecommerce-settings-locations.html" class="menu-link">
-                        <div data-i18n="Locations">Locations</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="app-ecommerce-settings-notifications.html" class="menu-link">
-                        <div data-i18n="Notifications">Notifications</div>
-                    </a>
-                </li>
-            </ul>
         </li>
 
 

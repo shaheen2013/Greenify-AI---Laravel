@@ -5,6 +5,7 @@ use App\Http\Controllers\Backend\LoginController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\UserRoleController;
 use App\Http\Controllers\Backend\UserPermissionController;
+use App\Http\Controllers\SettingsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,5 +39,9 @@ Route::prefix('backend')->group(function () {
         Route::resource('users', UserController::class);
         Route::resource('roles', UserRoleController::class);
         Route::resource('permissions', UserPermissionController::class);
+
+        Route::controller(SettingsController::class)->prefix('settings')->name('settings.')->group(function () {
+            Route::get('/', 'index')->name('index');
+        });
     });
 });

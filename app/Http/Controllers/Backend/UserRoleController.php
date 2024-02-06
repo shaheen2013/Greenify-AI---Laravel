@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 use Validator;
@@ -67,7 +68,13 @@ class UserRoleController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $data=array();
+        $data['role'] = Role::findOrFail($id);
+        $data['permissions'] = Permission::get();
+        $data['permitted']= Permission::join("role_has_permissions","role_has_permissions.permission_id","=","permissions.id")
+        ->where("role_has_permissions.role_id",$id)
+        ->get();
+        return view($this->path.'.edit',$data);
     }
 
     /**
@@ -75,7 +82,22 @@ class UserRoleController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $validator = Validator::make($request->all(),[
+            'name' => [
+                'required',
+                Rule::unique('roles', 'name')->ignore($id),
+            ],
+            'permissions' => 'required'
+        ]);
+        if ($validator->fails()) {
+            return redirect()->back()->with('error', Toastr::error($validator->errors(), 'Validation Error'));
+        }
+
+        $role = Role::find($id);
+        $role->name = strtolower(trim($request->name));
+        $role->save();
+        $role->syncPermissions($request->permissions);
+        return redirect()->route('roles.index')->with('success',Toastr::success("Role Updated Successfully", 'Role'));
     }
 
     /**
@@ -83,6 +105,8 @@ class UserRoleController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        // dd($id);
+        Role::find($id)->delete();
+        return redirect()->route('roles.index')->with('success',Toastr::success("Role Deleted Successfully", 'Role'));
     }
 }

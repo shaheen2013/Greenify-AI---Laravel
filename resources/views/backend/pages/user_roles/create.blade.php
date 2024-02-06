@@ -14,20 +14,24 @@
                     Role add
                 </h5>
                 <div class="card-body">
-                    <form method="POST" id="" action="{{route('roles.store')}}">
+                    <form method="POST" id="" action="{{ route('roles.store') }}">
                         @csrf
                         <div class="mb-3">
                             <label for="name" class="form-label">Role Name</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Name"
+                                required>
                         </div>
                         <div class="mb-3">
-                            <label for="permission" class="form-label">Example multiple select</label>
-                            <select multiple="true" name="permissions[]" class="form-select" id="permission"
-                                    aria-label="Multiple select example">
-                                @foreach($permissions as $permission)
-                                    <option value="{{$permission->name}}">{{$permission->name}}</option>
-                                @endforeach
-                            </select>
+                            <label for="permission" class="form-label">Select permitted modules</label>
+                            @foreach ($permissions as $permission)
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="permissions[]"
+                                        value="{{ $permission->name }}" id="flexCheckIndeterminate">
+                                    <label class="form-check-label" for="flexCheckIndeterminate">
+                                        {{ $permission->name }}
+                                    </label>
+                                </div>
+                            @endforeach
                         </div>
                         <div class="col-12 d-flex justify-content-end">
                             <button class="btn btn-success" type="submit">
@@ -45,7 +49,5 @@
 @endsection
 
 @push('scripts')
-    <script type="text/javascript">
-
-    </script>
+    <script type="text/javascript"></script>
 @endpush
