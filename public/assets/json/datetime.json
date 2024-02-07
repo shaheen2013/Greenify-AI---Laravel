@@ -1,0 +1,47 @@
+[
+    {
+        "format" : "d/M/yy"
+    },
+    {
+        "format" : "d-M-yy"
+    },
+    {
+        "format" : "d.M.yy"
+    },
+    {
+        "format" : "M/d/yy"
+    },
+    {
+        "format" : "M-d-yy"
+    },
+    {
+        "format" : "M.d.yy"
+    },
+    {
+        "format" : "yy/M/d"
+    },
+    {
+        "format" : "yy-M-d"
+    },
+    {
+        "format" : "yy.M.d"
+    },
+    {
+        "format" : "MMM d, yyyy"
+    },
+    {
+        "format" : "EEE, MMM d, yyyy"
+    },
+    {
+        "format" : "yyyy-MM-dd'T'HH-mm-ssZ"
+    },
+    {
+        "format" : "yyyy-MM-dd'T'HH:mm:ss'Z'"
+    },
+    {
+        "format" : "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+    },
+    {
+        "format" : "EEE d MMM yyyy HH:mm:ss Z"
+    }
+]

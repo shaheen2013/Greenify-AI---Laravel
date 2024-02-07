@@ -42,6 +42,7 @@ Route::prefix('backend')->group(function () {
 
         Route::controller(SettingsController::class)->prefix('settings')->name('settings.')->group(function () {
             Route::get('/', 'index')->name('index');
+            Route::post('/update/{id}/{type}', 'update')->name('update');
         });
     });
 });
