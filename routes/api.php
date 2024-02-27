@@ -32,11 +32,9 @@ Route::get('test', function () {
             ->setRetsVersion('1.7.2');
 
     $rets = new \PHRETS\Session($config);
-    dd($rets->Login());
-
     $connect = $rets->Login();
 
     $results = $rets->Search('Property', 'RES', $dateRange, ['MLStatus' => 'A', 'MLStatus' => 'US', 'MLStatus' => 'CS']);
 
-    dd($connect, $results);
+    dd($results);
 });
